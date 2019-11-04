@@ -23,8 +23,10 @@ having a "transform/load" method as part of the object (check out the code to
  see what I mean). That makes the methods dependent on the specific data,
  and not like in the first case indepdendent of it.
 
-## Example 2 NLP Example (NOT DONE)
+## Example 2 NLP Example (DONE)
+Check out "2_nlp_example.py" to see how to use
+fklearn for a NLP task, in particular:
+- how to write a new curried function
+- use the predefined lightGBM classifier
 
-## Example 3 categorical stuff (NOT DONE)
-
-## Example 4 Grid Search (NOT DONE)
+## Example 3 Grid Search (NOT DONE)
