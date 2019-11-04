@@ -21,7 +21,7 @@ but all of the transformations are applied as functions.
 2. In the second case however, you'd usually think about the data as
 having a "transform/load" method as part of the object (check out the code to
  see what I mean). That makes the methods dependent on the specific data,
- and not like in the first case indepdendent of it.
+ and not like in the first case independent of it.
 
 ## Example 2 NLP Example (DONE)
 Check out "2_nlp_example.py" to see how to use
@@ -29,4 +29,7 @@ fklearn for a NLP task, in particular:
 - how to write a new curried function
 - use the predefined lightGBM classifier
 
-## Example 3 Grid Search (NOT DONE)
+## Example 3 Grid Search (DONE)
+Finally take a look at "3_grid_search.py" to see
+- how to use the built in grid_search
+- the built in n fold splitters & evaluators
