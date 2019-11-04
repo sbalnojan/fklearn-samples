@@ -8,6 +8,8 @@
 $ ./batect --list-tasks
 ```
 
+in the meantime: use pipenv to install the right dependencies.
+
 ## Example 1 (minimal example, DONE)
 Check out the two files 1_easy.py and 1_easy_wo_functions.py and compare the code.
 

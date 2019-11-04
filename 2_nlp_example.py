@@ -57,7 +57,6 @@ _, transformed_df,_ = transform_fn(df)
 print("transformed data... running training: ...")
 
 # Pre transformations
-
 p, df, log = transform_fn(train_df)
 
 from fklearn.training.classification import lgbm_classification_learner
