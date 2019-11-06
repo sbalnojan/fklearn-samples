@@ -10,6 +10,7 @@ black = "*"
 fklearn = "*"
 gluonnlp = "*"
 lightgbm = "*"
+mxnet = "*"
 
 [requires]
 python_version = "3.7"
