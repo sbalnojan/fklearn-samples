@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+
 # ----------------------------------------------------------------------------------------------------------------------
 # Generate some dummy data
 
@@ -25,7 +26,7 @@ from fklearn.validation.splitters import k_fold_splitter
 from fklearn.validation.evaluators import mse_evaluator
 
 space = {
-    'intercept': lambda: [0, 1],
+    "intercept": lambda: [0, 1],
 }
 
 
@@ -34,15 +35,14 @@ def param_train_fn(space, train_set):
     return linear_regression_learner(
         features=["income"],
         target="target",
-        params={"fit_intercept": space["intercept"]})(train_set)
+        params={"fit_intercept": space["intercept"]},
+    )(train_set)
 
 
 split_fn = k_fold_splitter(n_splits=2)
-tuning_log = grid_search_cv(space,
-                            df,
-                            param_train_fn=param_train_fn,
-                            split_fn=split_fn,
-                            eval_fn=mse_evaluator)
+tuning_log = grid_search_cv(
+    space, df, param_train_fn=param_train_fn, split_fn=split_fn, eval_fn=mse_evaluator
+)
 
 for run in tuning_log:
     print(f"mse score in this run per fold: {run['validator_log']}")

@@ -28,6 +28,7 @@ df["income"] = np.clip(df["income"], a_min=None, a_max=500)
 
 # 2. Now let's run our regression
 from sklearn.linear_model import LinearRegression
+
 X = np.array(df["income"].values).reshape(-1, 1)
 reg = LinearRegression().fit(X, df["bill_amount"])
 predictions = reg.predict(X)
@@ -37,6 +38,4 @@ df["predictions"] = predictions
 df["predictions"] = np.clip(df["predictions"], a_min=None, a_max=200)
 
 #
-print(
-    f" the returned dataframe now contains our capped prediction:\n {df.head(5)}"
-)
+print(f" the returned dataframe now contains our capped prediction:\n {df.head(5)}")
