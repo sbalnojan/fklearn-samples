@@ -3,9 +3,25 @@
 ...
 
 ## Run batect (everything here...)
-(not running yet)
+There are still some rough edges in there, but it works! If you want to
+ run anything in here, see how to correctly install the dependencies,
+ download the data, lint the files etc. you can use batect which has 
+ it's little container where it already works just fine.
+ 
+ 
 ```
 $ ./batect --list-tasks
+
+Build tasks:
+- get_data: download nlp data to local file
+- run_example_1: compile the files to target
+
+Utility tasks:
+- dep_0: Download pipenv dependency & linter
+- dep_1: Download dependencies
+- dep_2: Download dev dependencies (run only if nec.)
+- lint: lint python files
+- shell: Open shell in container
 ```
 
 in the meantime: use pipenv to install the right dependencies.

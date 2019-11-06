@@ -30,7 +30,7 @@ tasks:
     group: Utility tasks
     run:
       container: build-env
-      command: python -m pipenv install
+      command: python -m pipenv install --skip-lock
 
   dep_2:
     description: Download dev dependencies (run only if nec.)
@@ -59,11 +59,11 @@ tasks:
     group: Build tasks
     run:
       container: build-env
-      command: python 0_get_data.py
+      command: python -m pipenv run python 0_get_data.py
 
   run_example_1:
     description: compile the files to target
     group: Build tasks
     run:
       container: build-env
-      command: compile
+      command: python -m pipenv run python 1_easy.py
