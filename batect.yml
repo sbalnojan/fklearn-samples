@@ -62,8 +62,23 @@ tasks:
       command: python -m pipenv run python 0_get_data.py
 
   run_example_1:
-    description: compile the files to target
+    description: Run a sinmple fklearn example
     group: Build tasks
     run:
       container: build-env
       command: python -m pipenv run python 1_easy.py
+
+  run_example_1_wo:
+    description: Run a sinmple sklearn example, without functions
+    group: Build tasks
+    run:
+      container: build-env
+      command: python -m pipenv run python 1_easy_wo_functions.py
+
+  run_example_2:
+    description: Run a nlp fklearn example
+    group: Build tasks
+    run:
+      container: build-env
+      command: python -m pipenv run python 2_nlp_example.py
+
