@@ -60,7 +60,7 @@ train_df, holdout_df = train_test_split(df)
 transform_fn = fit_tfidf(text_column="text", target_column="score", max_features=5000)
 
 _, transformed_df, _ = transform_fn(df)
-print("transformed data... running training: ...")
+print("\ntransformed data... running training: ...\n")
 
 # Pre transformations
 p, df, log = transform_fn(train_df)
@@ -105,4 +105,4 @@ from sklearn.metrics import fbeta_score
 f_beta = fbeta_score(
     holdout_df["score"], holdout_df["prediction"], average="macro", beta=0.5
 )
-print(f"F1 Score: {f_beta}")
+print(f"\nF1 Score: {f_beta}")
